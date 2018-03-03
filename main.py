@@ -32,6 +32,7 @@ data = pd.DataFrame(pd.read_csv(f))
 f.close()
 
 weight = [0]*11
+secondaryWeight = []
 count = 0
 for c in data:
     if count < 18:
@@ -46,15 +47,21 @@ for c in data:
             if int(val) > len(weight):
                 break
             weight[int(val)] += stuff[val]
+            secondaryWeight += weight
         else:
             weight[0] += stuff[val]
-
+            secondaryWeight += weight
+    count += 1
+    secondaryWeight[-len(weight):] = [float(i/sum(secondaryWeight[-len(weight):]))/1000000 for i in secondaryWeight[-len(weight):]]
+count -= 18
 weight = [int(i/sum(weight)*1000) for i in weight]
 plot_kwds = {'alpha': .25, 's': 80, 'linewidths': 0}
 
 #weight = occerence([1,2,3,4,5,6,7,8,9], data)
 #weight = [data.value_counts() for i in data.iterrows()]
 
+plt.figure(num=None, figsize=(70, 40), dpi=100, facecolor='w', edgecolor='k')
 #plt.scatter(data['q5'], data['q9'], c='b', **plot_kwds)
-plt.scatter([i for i in range(1,10)], [1 for i in range(1,10)], s=weight)
+#plt.scatter([i for i in range(1,10)], [1 for i in range(1,10)], s=weight)
+plt.scatter([[i]*len(weight) for i in range(1, count)], [[i for i in range(1,len(weight)+1)] for i in range(1, count)], s=secondaryWeight)
 plt.show()
