@@ -1,0 +1,28 @@
+q5 - inereset in politics
+thought - how much thought hae you given to the election
+cacmpnii - how closely have you followed the election
+q9 - who would you vote for
+q10c - for trump or against clintom
+q10d - for clinton or against trump
+q23 - does new president matter
+q25f2 - would neither make a good president
+q35 - does hillary being a woman make a difference
+q40[a-f][jf1-lf1][nf2-qf2] - how important 
+q45[a-d] - point of view on different groups
+q55 - current economic climate
+q57 - personal financial information
+q59 - job oppertunities
+q71 - republican primary canidate
+q72 - preffered democratic candate
+q80 - should churches endorse canidates
+q81 - should president be religous
+sex
+age
+educ
+race
+relig
+attend - church services freuqency
+income
+party
+ideo - how far right or left
+hh1 - number of household members
