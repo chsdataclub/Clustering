@@ -1,6 +1,6 @@
 q5 - inereset in politics
 thought - how much thought hae you given to the election
-cacmpnii - how closely have you followed the election
+campnii - how closely have you followed the election
 q9 - who would you vote for
 q10c - for trump or against clintom
 q10d - for clinton or against trump
